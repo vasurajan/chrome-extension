@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather API</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-fonts@1.1.1/fonts/inter.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+
 </head>
+
 <body>
-    <h1>This is all about chrome extension</h1>
+    <input placeholder="City" id="search">
+    <br>
+    <select id="units">
+        <option value="f">Farhrenheit</option>
+        <option value="m">Celcius</option>
+    </select>
+    <br>
+    <button id="btn">Get Weather</button>
+    <br>
+    <br>
+    <img id="image" src="" />
+    <div id="output"></div>
+    <script src="app/content.js"></script>
 </body>
+
 </html>
