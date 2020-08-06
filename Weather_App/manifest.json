@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Weather",
+    "version": "1.0",
+    "description": "Displays the weather at desired location",
+    "icons": {
+        "128": "48.png"
+    },
+    "browser_action": {
+        "default_icon": "48.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "<all_urls>",
+        "geolocation"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "index.js"
+            ]
+        }
+    ],
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
+}
