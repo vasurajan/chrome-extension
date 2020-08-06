@@ -1,3 +1,5 @@
+var name = prompt("what is your name?")
+alert("Hello " + name);
 const a1 = document.querySelector('.weather');
 function weatherBall(cityId){
 	//Calling a Api with url 
@@ -23,14 +25,6 @@ function draw(d){
 	let date = today.getDate();
 	let month = today.getMonth()+1;
 	let year = today.getFullYear();
-	if(celcuis < 16){
-		a1.classList.add('app');
-		console.log("cold");
-	}
-	else{
-		a1.classList.add('app-warm');
-		console.log("hot");
-	}
 	let weekday = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturaday","Sunday"];
 	let years = ['January','February','March','AprilMay','June', 'August','September','October','November',"December"];
 	let day_name = weekday[day];
@@ -39,7 +33,9 @@ function draw(d){
 	document.getElementById('location').innerHTML = d.name+','+d.sys.country;
 	document.getElementById('date').innerHTML = result;
 	document.getElementById('temp').innerHTML = celcuis + '&deg'+'c';
+	document.getElementById('description').innerHTML = description;
 }
+
 let a = document.getElementById('search');	
 a.addEventListener('keydown', (e) => {
 	if(e.key === 'Enter'){
